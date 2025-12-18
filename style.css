@@ -1,0 +1,69 @@
+body {
+  background: #008080;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ウィンドウ */
+.window {
+  background: #c0c0c0;
+  width: 640px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+}
+
+/* タイトルバー */
+.title-bar {
+  background: #000080;
+  color: white;
+  font-family: "MS Gothic", monospace;
+  padding: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.window-controls button {
+  width: 22px;
+  height: 22px;
+  background: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.window-controls button:active {
+  border-color: #404040 #ffffff #ffffff #404040;
+}
+
+/* メニュー */
+.menu-bar {
+  background: #c0c0c0;
+  padding: 2px;
+  border-bottom: 2px solid;
+  border-color: #ffffff #404040 #404040 #ffffff;
+}
+
+/* テキスト */
+textarea {
+  flex: 1;
+  resize: none;
+  border: 2px solid;
+  border-color: #404040 #ffffff #ffffff #404040;
+  font-family: "MS Gothic", monospace;
+  font-size: 16px;
+  padding: 6px;
+  outline: none;
+}
