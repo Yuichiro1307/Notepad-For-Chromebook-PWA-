@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メモ帳</title>
+
+  <link rel="icon" href="icons/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <span class="title">メモ帳</span>
+      <div class="window-controls">
+        <button id="openBtn">－</button>
+        <button id="maxBtn">□</button>
+        <button id="closeBtn">×</button>
+      </div>
+    </div>
+
+    <div class="menu-bar">
+      <select id="fontSelect">
+        <option value="MS Gothic">MS Gothic</option>
+        <option value="Yu Gothic">Yu Gothic</option>
+        <option value="Meiryo">Meiryo</option>
+        <option value="sans-serif">Sans Serif</option>
+      </select>
+    </div>
+
+    <textarea id="memo"></textarea>
+  </div>
+
+  <!-- 非表示ファイル選択 -->
+  <input type="file" id="fileInput" accept=".txt,text/plain" hidden>
+
+  <script src="app.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
